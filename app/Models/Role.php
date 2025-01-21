@@ -52,7 +52,7 @@ class Role extends Model
         parent::boot();
 
         static::creating(function ($role) {
-            $role->name = strtolower($role->name); // Exemple : normaliser le nom en minuscules
+            $role->name = strtolower($role->name);
         });
     }
 }
