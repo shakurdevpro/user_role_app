@@ -7,22 +7,22 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class UserRole extends Pivot
 {
     /**
-     * Les attributs qui peuvent être attribués en masse.
+     * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = ['user_id', 'role_id'];
 
     /**
-     * La table associée à ce modèle.
+     * The table associated with this model.
      *
      * @var string
      */
     protected $table = 'user_role';
 
     /**
-     * Relation avec le modèle User.
-     * Un UserRole appartient à un utilisateur.
+     * Relationship with the User model.
+     * A UserRole belongs to a user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -32,8 +32,8 @@ class UserRole extends Pivot
     }
 
     /**
-     * Relation avec le modèle Role.
-     * Un UserRole appartient à un rôle.
+     * Relationship with the Role model.
+     * A UserRole belongs to a role.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

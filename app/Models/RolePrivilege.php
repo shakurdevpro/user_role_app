@@ -7,22 +7,22 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class RolePrivilege extends Pivot
 {
     /**
-     * Les attributs qui peuvent être attribués en masse.
+     * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = ['role_id', 'privilege_id'];
 
     /**
-     * La table associée à ce modèle.
+     * The table associated with this model.
      *
      * @var string
      */
     protected $table = 'role_privilege';
 
     /**
-     * Relation avec le modèle Role.
-     * Un RolePrivilege appartient à un rôle.
+     * Relationship with the Role model.
+     * A RolePrivilege belongs to a role.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -32,8 +32,8 @@ class RolePrivilege extends Pivot
     }
 
     /**
-     * Relation avec le modèle Privilege.
-     * Un RolePrivilege appartient à un privilège.
+     * Relationship with the Privilege model.
+     * A RolePrivilege belongs to a privilege.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

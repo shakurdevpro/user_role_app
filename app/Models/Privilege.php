@@ -14,15 +14,15 @@ class Privilege extends Model
     protected $fillable = ['name'];
 
     /**
-     * Les privilèges sont automatiquement associés à la table "privileges".
+     * Privileges are automatically associated with the "privileges" table.
      *
      * @var string
      */
     protected $table = 'privileges';
 
     /**
-     * Relation "un privilège peut être attribué à plusieurs rôles".
-     * Un privilège peut être attribué à plusieurs rôles via la table pivot "role_privilege".
+     * "One privilege can be assigned to many roles" relationship.
+     * A privilege can be assigned to many roles via the pivot table "role_privilege".
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -32,15 +32,15 @@ class Privilege extends Model
     }
 
     /**
-     * Méthode pour normaliser le nom d'un privilège avant de le sauvegarder.
-     * Par exemple, on pourrait vouloir le convertir en minuscules.
+     * Method to normalize the name of a privilege before saving.
+     * For example, we might want to convert it to lowercase.
      */
     public static function boot()
     {
         parent::boot();
 
         static::creating(function ($privilege) {
-            $privilege->name = strtolower($privilege->name); 
+            $privilege->name = strtolower($privilege->name);
         });
     }
 }

@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class LogActivity extends Model
 {
     /**
-     * Les attributs qui peuvent être attribués en masse.
+     * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = ['user_id', 'action', 'details', 'ip_address', 'user_agent'];
 
     /**
-     * Relation avec le modèle User.
-     * Un LogActivity appartient à un utilisateur.
+     * Relationship with the User model.
+     * A LogActivity belongs to a user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

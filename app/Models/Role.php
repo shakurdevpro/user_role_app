@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-
     /**
      * The attributes that are mass assignable.
      *
@@ -15,15 +14,15 @@ class Role extends Model
     protected $fillable = ['name'];
 
     /**
-     * Les rôles sont automatiquement associés à la table "roles".
+     * Roles are automatically associated with the "roles" table.
      *
      * @var string
      */
     protected $table = 'roles';
 
     /**
-     * Relation "un rôle appartient à plusieurs utilisateurs".
-     * Un rôle peut être attribué à plusieurs utilisateurs via la table pivot "user_role".
+     * "One role belongs to many users" relationship.
+     * A role can be assigned to many users via the pivot table "user_role".
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -33,8 +32,8 @@ class Role extends Model
     }
 
     /**
-     * Relation "un rôle a plusieurs privilèges".
-     * Un rôle peut avoir plusieurs privilèges via la table pivot "role_privilege".
+     * "One role has many privileges" relationship.
+     * A role can have many privileges via the pivot table "role_privilege".
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -44,8 +43,8 @@ class Role extends Model
     }
 
     /**
-     * Indiquer si l'attribut 'name' est unique.
-     * Cela est géré via la migration et validé au niveau de la base de données.
+     * Ensure the 'name' attribute is unique.
+     * This is handled via the migration and validated at the database level.
      */
     public static function boot()
     {
