@@ -1,5 +1,5 @@
 @extends('layouts.auth')
-@section('title', 'Sign Up')
+@section('title', 'Forgot Password?')
 @section('styles')
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
     <link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
@@ -7,7 +7,7 @@
     <!--end::Global Stylesheets Bundle-->
 @endsection
 @section('content')
-    <!--begin::Authentication - Sign-up -->
+    <!--begin::Authentication - Password reset -->
     <div class="d-flex flex-column flex-lg-row flex-column-fluid">
         @include('sections.logo')
         <!--begin::Body-->
@@ -20,10 +20,10 @@
             </div>
             <!--end::Wrapper-->
         </div>
-        <!--end::Body-->
+        <!--begin::Body-->
         @include('sections.aside')
     </div>
-    <!--end::Authentication - Sign-up-->
+    <!--end::Authentication - Password reset-->
 @endsection
 @section('scripts')
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
@@ -31,7 +31,7 @@
     <script src="{{ asset('js/scripts.bundle.js') }}"></script>
     <!--end::Global Javascript Bundle-->
     <!--begin::Custom Javascript(used for this page only)-->
-    <script src="{{ asset('js/custom/authentication/sign-up/general.js') }}"></script>
+    <script src="{{ asset('js/custom/authentication/reset-password/reset-password.js') }}"></script>
     <script src="{{ asset('js/custom/authentication/sign-in/i18n.js') }}"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->

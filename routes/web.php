@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\SignInController;
 use App\Http\Controllers\Auth\SignUpController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 
 Route::get('/', function () {
@@ -26,3 +27,10 @@ Route::get('/dashboard/inactive', [SignInController::class, 'inactiveDashboard']
 //Déconnexion
 Route::post('/logout', [SignInController::class, 'logout'])->name('logout');
 
+//Reset Password
+Route::get('/forgot-password', [ResetPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('/forgot-password', [ResetPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+
+//Update Password
+Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');

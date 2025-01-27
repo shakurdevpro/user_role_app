@@ -36,7 +36,7 @@ var KTAuthI18nDemo = (function () {
                 Spanish: "Inscribirse",
                 German: "Anmeldung",
                 Japanese: "サインアップ",
-                French: "S'S'inscrire",
+                French: "S'inscrire",
             },
             "sign-in-title": {
                 English: "Sign In",
@@ -92,7 +92,7 @@ var KTAuthI18nDemo = (function () {
                 Spanish: "Inscribirse",
                 German: "Anmeldung",
                 Japanese: "サインアップ",
-                French: "S'S'inscrire",
+                French: "S'inscrire",
             },
             "sign-up-input-first-name": {
                 English: "First Name",
